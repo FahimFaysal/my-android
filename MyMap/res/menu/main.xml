@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mymap.MainActivity" >
+
+    <item
+        android:id="@+id/mapTypeNormal"
+        android:title="Normal"/>
+    <!-- defualt type map -->
+    <item
+        android:id="@+id/mapTypeSatallite"
+        android:title="Satallite"/>
+    
+    <item
+        android:id="@+id/mapTypeTerrain"
+        android:title="Terrain"/>
+    <item
+        android:id="@+id/mapTypeHybrid"
+        android:title="Hybrid"/>
+    <!-- combination of normal and satallite -->
+   
+    <item
+        android:id="@+id/mapTypeNone"
+        android:title="None"/>
+    <!-- blank screen -->
+
+</menu>
