@@ -15,11 +15,13 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 
-public class MyLocation extends FragmentActivity implements ConnectionCallbacks, OnConnectionFailedListener {
+public class MyLocation extends FragmentActivity {
 
 	private static final int Gps_ErrorDialogRequest = 9001;
 	GoogleMap googleMap;
-	GoogleApiClient googleApiClient;
+	
+	private GoogleApiClient googleApiClient;
+	
 	LocationRequest locationRequest;
 	LocationCallback locationCallback ;
 	
@@ -31,8 +33,10 @@ public class MyLocation extends FragmentActivity implements ConnectionCallbacks,
 			setContentView(R.layout.mylocaltion);
 			if (initMap()) {
 //				locationCallback = new LocationCallback(this, this, this) ;
-//				Toast.makeText(this, "Ready to map :D", Toast.LENGTH_SHORT).show();
-//				googleMap.setMyLocationEnabled(true); // must enable location	// from device
+				Toast.makeText(this, "Ready to map :D", Toast.LENGTH_SHORT).show();
+				
+				 /*current location using xml*/
+				googleMap.setMyLocationEnabled(true); // must enable location	// from device
 				
 			} else {
 				Toast.makeText(this, "Map is not avialable", Toast.LENGTH_SHORT).show();
@@ -67,23 +71,6 @@ public class MyLocation extends FragmentActivity implements ConnectionCallbacks,
 		return isServiceOk;
 	}
 
-	@Override
-	public void onConnectionFailed(ConnectionResult arg0) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	@Override
-	public void onConnected(Bundle arg0) {
-		// TODO Auto-generated method stub
-		Toast.makeText(getApplicationContext(), "map service is connected", Toast.LENGTH_SHORT).show();
-		
-	}
-
-	@Override
-	public void onConnectionSuspended(int arg0) {
-		Toast.makeText(getApplicationContext(), "map service is Disconnected", Toast.LENGTH_SHORT).show();
-		
-	}
 
 }

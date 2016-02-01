@@ -48,27 +48,27 @@
         android:text="My Location" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/buttonFusedLocationApi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/buttonMyLocation"
         android:layout_below="@+id/buttonMyLocation"
-        android:text="Button" />
+        android:text="CurrentLocationFusedLocationApi" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonLatLan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonGPS"
+        android:layout_below="@+id/buttonGPS"
+        android:text="Lat Lan" />
+
+    <Button
+        android:id="@+id/buttonGPS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/buttonMapView"
-        android:layout_below="@+id/button1"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/button2"
-        android:text="Button" />
+        android:layout_below="@+id/buttonFusedLocationApi"
+        android:text="GPS(Lat Lan)" />
 
 </RelativeLayout>

@@ -46,9 +46,10 @@ public class GeoCode extends FragmentActivity {
 
 			if (initMap()) {
 				Toast.makeText(this, "Ready to map :D", Toast.LENGTH_SHORT).show();
-//				googleMap.setMyLocationEnabled(true);  // must enable location from device 
+				// googleMap.setMyLocationEnabled(true); // must enable location
+				// from device
 				// gotoLocation(shohidMinerLat, shohidMinerLng);
-//				gotoLocation(shohidMinerLat, shohidMinerLng, defualtZoom);
+				// gotoLocation(shohidMinerLat, shohidMinerLng, defualtZoom);
 			} else {
 				Toast.makeText(this, "Map is not avialable", Toast.LENGTH_SHORT).show();
 			}
@@ -164,28 +165,28 @@ public class GeoCode extends FragmentActivity {
 
 	@Override
 	protected void onStop() {
-		
+
 		super.onStop();
 		MapStateManager mapStateManager = new MapStateManager(this);
 		mapStateManager.saveMapState(googleMap);
 	}
-	
+
 	@Override
 	protected void onResume() {
-		
+
 		super.onResume();
-	MapStateManager mapStateManager = new MapStateManager(this);
-		
+		MapStateManager mapStateManager = new MapStateManager(this);
+
 		CameraPosition cameraPosition = mapStateManager.getSavedCameraPosition();
-		if(cameraPosition != null){
+		if (cameraPosition != null) {
 			CameraUpdate cameraUpdate = CameraUpdateFactory.newCameraPosition(cameraPosition);
 			googleMap.moveCamera(cameraUpdate);
 		}
-		
-//		String st  = mapStateManager.getSaveMapTyep();
+
+		// String st = mapStateManager.getSaveMapTyep();
 		Toast.makeText(getApplicationContext(), "....", Toast.LENGTH_SHORT).show();
-		Log.i("MapType..", mapStateManager.getSaveMapTyep()+".............");
-		
+		Log.i("MapType..", mapStateManager.getSaveMapTyep() + ".............");
+
 	}
 
 }

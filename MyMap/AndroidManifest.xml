@@ -22,7 +22,7 @@
 
     <!-- permision for current location -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCTION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
@@ -68,10 +68,37 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".FusedLocationApi"
+            android:label="Fused Location Api" >
+            <intent-filter>
+                <action android:name="android.intent.action.FUSEDLOCATIONAPI" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+           <activity
+            android:name=".GpsTracker"
+            android:label="Gps Tracker" >
+            <intent-filter>
+                <action android:name="android.intent.action.GPSTRACKER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".ShowLocationActivity"
+            android:label="ShowLocation Activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SHOWLOCATIONACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="*********************************" />
+            android:value="AIzaSyCRQJG_UmjBqfykk8pBgpey4DLCwfKL_dg" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
